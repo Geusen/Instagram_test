@@ -3,7 +3,7 @@ import datetime
 import os
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options as options
+from selenium.webdriver.chrome.options import Options as option
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
