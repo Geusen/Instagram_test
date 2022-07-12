@@ -15,10 +15,12 @@ print(dt.strftime('\n[%Y年%m月%d日(' + w_list[dt.weekday()] + ') %H:%M:%S]'))
 #-----------------------------------------------------------------------------
 user_name = settings.ID
 password = settings.PW
+url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/768px-Octicons-mark-github.svg.png"
 api = Client(user_name, password)
 
-#img_bin = io.BytesIO("white.png")
-#img = Image.open(img_bin)
 
-#api.post_photo(img_bin.getvalue(), (img.width, img.height))
-api.post_photo("white.png", (605, 500))
+img_in = urllib.request.urlopen(url).read()
+img_bin = io.BytesIO(img_in)
+img = Image.open(img_bin)
+
+api.post_photo(img_bin.getvalue(), (img.width, img.height))
