@@ -1,6 +1,6 @@
 import settings
 import datetime
-import ConfigParser
+import configparser
 import os
 import time
 from selenium import webdriver
