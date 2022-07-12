@@ -1,6 +1,5 @@
 import settings
 import datetime
-import configparser
 import os
 import time
 from selenium import webdriver
@@ -14,15 +13,9 @@ dt = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
 w_list = ['月', '火', '水', '木', '金', '土', '日']
 print(dt.strftime('\n[%Y年%m月%d日(' + w_list[dt.weekday()] + ') %H:%M:%S]'))
 
-id = settings.ID
-password = settings.PW
+Insta_ID = settings.ID
+Insta_PASS = settings.PW
 text = "test"
-
-inifile = configparser.SafeConfigParser()
-inifile.read('./settings.ini')
-
-Insta_ID = inifile.get('Instagram','id')
-Insta_PASS = inifile.get('Instagram','password')
 Insta_URL = "https://www.instagram.com/accounts/login/"
 #-----------------------------------------------------------------------------
 # Chromeヘッドレスモード起動
