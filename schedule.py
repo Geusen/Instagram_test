@@ -18,7 +18,7 @@ id = settings.ID
 password = settings.PW
 text = "test"
 
-inifile = ConfigParser.SafeConfigParser()
+inifile = configparser.SafeConfigParser()
 inifile.read('./settings.ini')
 
 Insta_ID = inifile.get('Instagram','id')
