@@ -72,8 +72,6 @@ driver.find_element_by_class_name('UP43G').click() # 次へボタン押す
 
 # 投稿する文章取得
 text = inifile.get('Common','text')
-print "---------- Insta ----------"
-print text.decode('utf-8')
 
 # 文章入力
 time.sleep(3)
@@ -83,7 +81,7 @@ time.sleep(3)
 # 投稿
 driver.find_element_by_class_name('UP43G').click() # 投稿ボタン押す
 time.sleep(5) # 投稿完了まで待つ
-print "---------- Insta完了 ----------"  
+
 
 time.sleep(1)
 driver.quit()
