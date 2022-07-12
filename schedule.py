@@ -17,7 +17,8 @@ user_name = settings.ID
 password = settings.PW
 api = Client(user_name, password)
 
-img_bin = io.BytesIO("white.png")
-img = Image.open(img_bin)
+#img_bin = io.BytesIO("white.png")
+#img = Image.open(img_bin)
 
-api.post_photo(img_bin.getvalue(), (img.width, img.height))
+#api.post_photo(img_bin.getvalue(), (img.width, img.height))
+api.post_photo("white.png")
