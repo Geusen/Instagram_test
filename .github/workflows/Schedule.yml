@@ -18,6 +18,7 @@ jobs:
       - run: |
           python -m pip install --upgrade pip
           pip install python-dotenv==0.19.2
+          pip install pillow
           pip install instagram_private_api
           python schedule.py
       - name: Keepalive Workflow
